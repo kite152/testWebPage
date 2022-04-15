@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				font-family: "微软雅黑";
+			}
+			#b1{
+				margin: 0 auto;
+				text-align: center;
+				height: 300px;
+				width: 500px;
+				background-color: aquamarine;
+				position: relative;
+				top: 50px;
+			}
+			#b2{
+				position: absolute;
+				width: 300px;
+				height: 160px;
+				left: 100px;
+				top: 65px;
+				background-color: blueviolet;
+			}
+			#b3{
+				text-align: center;
+				width: 200px;
+				height: 40px;
+				border: 0;
+				border-radius: 50%;
+				background-color: blueviolet;
+				position: relative;
+				left: 6px;
+				top: 240px;
+			}
+			#b3:hover{
+				background-color: red;
+			}
+			#b4{
+				background-color: gray;
+				height: 20px;
+				width: 48px;
+				position: absolute;
+				left: 225px;
+				top: 120px;
+			}
+			input:hover{
+				background-color: yellowgreen;
+			}
+		</style>
+		<script src="js/jquery-3.1.1.js">
+		</script>
+		
+		<script type="text/javascript">
+			function change() 
+			{
+				var a="azxcvbnmsdfghjklqwertyuiopZXCVBNMASDFGHJKLQWERTYUIOP0123456789";
+				var b=" ";
+				for (var i=0;i < 4;i++)
+				{
+					var index = Math.floor(Math.random() * a.length);
+					b+= a[index];
+				}
+				document.getElementById("b4").innerHTML=b;
+			}
+		</script>
+	</head>
+	<body background="img/11.jpg" onload="change()">
+		<div id="b1">
+			<div id="b2">
+			<p>请输入账号： <input type="text"/></p>
+			<p>请输入密码： <input type="password"/></p>
+			<p>请输入验证码: <input type="text"/></p>
+			<div id="b4" onclick="change()">
+				
+			</div>
+		    </div>
+			<input type="button" id="b3" value="注册" />
+		</div>
+	</body>
+</html>
